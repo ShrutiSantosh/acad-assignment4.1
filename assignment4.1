@@ -1,0 +1,46 @@
+# acad-assignment4.1
+
+
+package assignment3;
+
+public class ProtectedTest {
+	
+	protected void sweetHome()
+	{
+		System.out.println("My Sweet Home");
+	}
+
+}
+
+
+
+package assignment4;
+
+import assignment3.ProtectedTest;
+
+public class ProtectedMethodInDifferentPackage {
+	public static void main(String[] args) {
+		
+		 new Acess().printHome();
+		
+	}
+	
+}
+
+class Acess extends ProtectedTest 
+{
+	void printHome()
+	{
+		sweetHome();
+	}
+}
+
+
+output
+My Sweet Home
+
+
+Explanation:
+protected access modifier allows our subclasses to be outside our superclass package and yet still inherit pieces of the class including 
+methods and constructors.. 
+The only way the subclass can access the protected methods is by inheritance
